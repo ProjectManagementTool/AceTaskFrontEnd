@@ -90,12 +90,6 @@ class ViewProjectTask extends Component {
 
                                 <table className="table table-striped table-bordered">
 
-                                    {/*<thead className={"thread-light bg-secondary text-light"}>*/}
-                                    {/*<tr>*/}
-                                    {/*    <th scope="col">Title</th>*/}
-                                    {/*    <th scope="col">Description</th>*/}
-                                    {/*</tr>*/}
-                                    {/*</thead>*/}
                                     <tbody>
                                     <tr>
 

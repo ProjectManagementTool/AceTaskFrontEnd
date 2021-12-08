@@ -15,13 +15,15 @@ class ProjectItem extends Component {
             <div className="container">
                 <div className="card card-body bg-dark mb-3 text-white border-secondary border-4">
                     <div className="row">
-                        <div className="col-2 ml-5 border text-center">
-                            <h5 style={{marginTop: "40px"}}>Project Id</h5>
-                            <h5>{project.projectIdentifier}</h5>
+                        <div className="col-3 ml-5 border text-left">
+                            <p style={{marginTop: "20px"}}>Project Id : {project.projectIdentifier}</p>
+                            <p>Start Date : {project.start_date}</p>
+                            <p>Expected End Date : {project.end_date}</p>
                         </div>
-                        <div className="col-lg-6 col-md-4 col-8 border">
+                        <div className="col-lg-5 col-md-4 col-8 border">
                             <h3 style={{marginTop: "30px"}}>{project.projectName}</h3>
                             <p>{project.description}</p>
+
                         </div>
                         <div className="col-md-3 ml-auto border-right">
                             <ul className="list-group">

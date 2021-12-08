@@ -34,7 +34,7 @@ class Backlog extends Component {
         <div className="row">
           <div className="col-md-4">
             <div className="card text-center mb-2">
-              <div className="card-header bg-secondary text-white">
+              <div className="card-header bg-light text-dark">
                 <h3>
                   <b>TO DO</b>
                 </h3>
@@ -45,7 +45,7 @@ class Backlog extends Component {
 
           <div className="col-md-4">
             <div className="card text-center mb-2">
-              <div className="card-header bg-primary text-white">
+              <div className="card-header bg-light text-dark">
                 <h3>
                   <b>In Progress</b>
                 </h3>
@@ -55,7 +55,7 @@ class Backlog extends Component {
           </div>
           <div className="col-md-4">
             <div className="card text-center mb-2">
-              <div className="card-header bg-success text-white">
+              <div className="card-header bg-light text-dark">
                 <h3>
                   <b>Done</b>
                 </h3>
