@@ -54,8 +54,9 @@ class Login extends Component {
             <div className="login">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-8 m-auto">
-                            <h1 className="display-4 text-center">Log In</h1>
+                        <div className="col-md-6 m-auto pb-5 pt-2 mt-2 border border-light shadow rounded">
+                            <h1 className=" text-center">Log into AceTask</h1>
+                            <p className="lead text-center">If you have created account</p>
                             <form onSubmit={this.onSubmit}>
                                 <div className="form-group">
                                     <input
@@ -91,7 +92,7 @@ class Login extends Component {
                                         )
                                     }
                                 </div>
-                                <input type="submit" className="btn btn-info btn-block mt-4"/>
+                                <input type="submit" value={"Log In"} className="btn btn-primary  mt-4"/>
                             </form>
                         </div>
                     </div>
