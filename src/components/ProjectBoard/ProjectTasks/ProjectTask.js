@@ -18,7 +18,7 @@ class ProjectTask extends Component {
       priorityString = "HIGH";
     }
     if (project_task.priority === 2) {
-      priorityClass = "bg-warning text-danger";
+      priorityClass = "bg-dark text-light";
       priorityString = "MEDIUM";
     }
     if (project_task.priority === 3) {
@@ -31,8 +31,7 @@ class ProjectTask extends Component {
         {/*  SAMPLE PROJECT TASK STARTS HERE*/}
         <div className="card mb-1 bg-light">
           <div className={`card-header text-primary ${priorityClass}`}>
-            Task Id : <b>{project_task.projectSequence} </b>
-            <br/>Priority :{" "}
+            Task Id : <b>{project_task.projectSequence} </b> &nbsp;&nbsp;&nbsp;&nbsp; Priority :{" "}
             <b>{priorityString}</b>
           </div>
           <div className="card-body bg-light">

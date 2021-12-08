@@ -36,7 +36,7 @@ class Header extends Component {
                     <li>
                         <Link className="btn btn-group-sm btn-outline-light mr-2 " to={"/logout"}  onClick={this.logout.bind(this)}>
 
-                            <i className="fas fa-sign-out-alt"/> Logout
+                            <i className="fas fa-sign-out-alt"/> Log Out
 
                         </Link>
                     </li>
