@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import PropTypes from "prop-types"
 import {connect} from "react-redux"
 import {logout} from "../../actions/securityActions";
+import "./Header.css"
 
 
 class Header extends Component {
@@ -73,7 +74,7 @@ class Header extends Component {
         return (
             //Navbar Component
             <div>
-                <nav className="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
+                <nav className="navbar navbar-expand-sm navbar-dark mb-4">
                     <div className="container">
                         <Link className="navbar-brand" to="/">
                             AceTask - A Project Management Tool
