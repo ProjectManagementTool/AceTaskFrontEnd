@@ -31,7 +31,8 @@ class ProjectTask extends Component {
         {/*  SAMPLE PROJECT TASK STARTS HERE*/}
         <div className="card mb-1 bg-light">
           <div className={`card-header text-primary ${priorityClass}`}>
-            ID: <b>{project_task.projectSequence} </b>-- Priority :{" "}
+            Task Id : <b>{project_task.projectSequence} </b>
+            <br/>Priority :{" "}
             <b>{priorityString}</b>
           </div>
           <div className="card-body bg-light">
@@ -43,7 +44,7 @@ class ProjectTask extends Component {
               to={`/updateProjectTask/${project_task.projectIdentifier}/${project_task.projectSequence}`}
               className="btn btn-primary"
             >
-              <b>View / Update</b>
+              <b>Update</b>
             </Link>
 
             <button

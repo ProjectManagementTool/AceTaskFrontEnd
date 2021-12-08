@@ -76,9 +76,9 @@ class UpdateProject extends Component {
       <div className="project">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 m-auto">
-              <h5 className="display-4 text-center">Update Project form</h5>
-              <hr />
+            <div className="col-md-6 m-auto pb-5 pt-4 pr-4 pl-4 mt-3 border border-light shadow rounded">
+              <h1 className="text-center">Update Project</h1>
+              <hr className={"mb-2 pb-1 mx-auto"} width={"70%"}/>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <input

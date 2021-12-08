@@ -97,16 +97,16 @@ class UpdateProjectTask extends Component {
         <div className="add-PBI">
           <div className="container">
             <div className="row">
-              <div className="col-md-8 m-auto">
+              <div className="col-md-6 m-auto pb-5 pt-4 pr-4 pl-4 mt-3 border border-light shadow rounded">
                 <Link
                     to={`/projectBoard/${this.state.projectIdentifier}`}
                     className="btn btn-light"
                 >
-                  Back to Project Board
+                  <i className="fa fa-arrow-circle-left font-weight-bold" > Back to project board</i>
                 </Link>
-                <h4 className="display-4 text-center">Update Project Task</h4>
+                <h1 className="text-center mt-3">Update project Task</h1>
                 <p className="lead text-center">
-                  Project Name: {this.state.projectIdentifier} | Project Task ID:{" "}
+                  Project Id: {this.state.projectIdentifier} | Project Task ID:{" "}
                   {this.state.projectSequence}{" "}
                 </p>
                 <form onSubmit={this.onSubmit}>

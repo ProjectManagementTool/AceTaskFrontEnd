@@ -58,12 +58,12 @@ class AddProjectTask extends Component {
       <div className="add-PBI">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 m-auto">
-              <Link to={`/projectBoard/${id}`} className="btn btn-light">
-                Back to Project Board
+            <div className="col-md-6 m-auto pb-5 pt-4 pr-4 pl-4 mt-3 border border-light shadow rounded">
+              <Link to={`/projectBoard/${id}`} className="btn btn-outline-dark">
+                <i className="fa fa-arrow-circle-left font-weight-bold" > Back to project board</i>
               </Link>
-              <h4 className="display-4 text-center">Add Project Task</h4>
-              <p className="lead text-center">Project Name + Project Code</p>
+              <h1 className="text-center mt-3">Add project Task</h1>
+              <hr className={"mb-2 pb-1 mx-auto"} width={"70%"}/>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <input
