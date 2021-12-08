@@ -36,7 +36,7 @@ export default function AddProjectMaterial() {
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        <DialogTitle id="form-dialog-title">Create / Edit Project</DialogTitle>
+        <DialogTitle id="form-dialog-title">Create Project</DialogTitle>
         <DialogContent>
           <DialogContentText>Create New Project</DialogContentText>
           <TextField

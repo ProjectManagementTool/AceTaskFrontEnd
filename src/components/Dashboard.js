@@ -16,16 +16,15 @@ class Dashboard extends Component {
       <div>
         {/*Dashboard Component (Project Item included) */}
 
+        <CreateProjectButton />
+        <br/>
+
         <div className="projects">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
-                <h1 className="display-4 text-center">Projects</h1>
-                <br />
+                <h1 className=" text-center">Project Dashboard</h1>
 
-                <CreateProjectButton />
-
-                <br />
                 <hr />
                 {projects.map((project) => (
                   <ProjectItem key={project.id} project={project}/>

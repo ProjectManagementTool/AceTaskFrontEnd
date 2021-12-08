@@ -28,11 +28,11 @@ class Landing extends Component {
                                     Create your account to join active projects or start your own
                                 </p>
                                 <hr/>
-                                <Link className={"btn btn-lg btn-success border  border-secondary ml-5"} to={"/register"}>
-                                    Create new account
+                                <Link className={"btn btn-lg btn-outline-success border  border-success ml-5"} to={"/register"}>
+                                    <i className='fas fa-user-plus'>  Create new account</i>
                                 </Link>
-                                <Link className={"btn btn-lg btn-dark ml-5"} to={"/login"}>
-                                    Log In
+                                <Link className={"btn btn-lg btn-outline-dark ml-5"} to={"/login"}>
+                                    Log In <i className='	fas fa-sign-in' aria-hidden="true"> </i>
                                 </Link>
 
 

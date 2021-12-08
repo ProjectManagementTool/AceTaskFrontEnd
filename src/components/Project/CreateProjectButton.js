@@ -7,8 +7,8 @@ const CreateProjectButton = () => {
   return (
     <React.Fragment>
       <div className="text-center mb-0">
-        <Link to={"/addProject"} className="btn btn-lg btn-info ">
-          Create a Project
+        <Link to={"/addProject"} className="btn btn-outline-primary ">
+          Create new project
         </Link>
         {/*<AddProjectMaterial/>*/}
       </div>

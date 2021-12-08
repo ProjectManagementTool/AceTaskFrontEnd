@@ -20,7 +20,7 @@ class Header extends Component {
             <div className="collapse navbar-collapse" id="mobile-nav">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/dashboard">
+                        <Link className=" nav-link" to="/dashboard">
                             Dashboard
                         </Link>
                     </li>
@@ -28,13 +28,15 @@ class Header extends Component {
 
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <Link className="btn btn-lg btn-primary mr-2 " to={"/dashboard"}>
+                        <Link className="btn btn-group-lg btn-outline-light mr-2 " to={"/dashboard"}>
                             <i className="fas fa-user-circle mr-1"/>{user.fullName}
+
                         </Link>
                     </li>
                     <li>
-                        <Link className="btn btn-lg btn-primary mr-2 " to={"/logout"}  onClick={this.logout.bind(this)}>
-                            Logout
+                        <Link className="btn btn-group-sm btn-outline-light mr-2 " to={"/logout"}  onClick={this.logout.bind(this)}>
+
+                            <i className="fas fa-sign-out-alt"/> Logout
 
                         </Link>
                     </li>
@@ -46,12 +48,13 @@ class Header extends Component {
 
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <Link className="btn btn-lg btn-success border border-secondary  mr-2 " to={"/register"}>
-                            Sign Up
+                        <Link className="btn btn-group-sm btn-outline-light border border-light  mr-2 " to={"/register"}>
+
+                          Sign Up
                         </Link>
                     </li>
                     <li>
-                        <Link className="btn btn-lg btn-dark  mr-2 " to={"/login"} >
+                        <Link className="btn btn-group-sm btn-outline-light border-light mr-2 " to={"/login"} >
                             Log In
                         </Link>
                     </li>

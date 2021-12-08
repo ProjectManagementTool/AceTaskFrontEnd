@@ -54,7 +54,7 @@ class Register extends Component {
             <div className="register">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6 m-auto pb-5 pt-2 mt-2 border border-light shadow rounded">
+                        <div className="col-md-6 m-auto pb-5 pt-4 pr-4 pl-4 mt-3 border border-light shadow rounded">
                             <h1 className=" text-center">Create a new account</h1>
                             <p className="lead text-center">It's quick and easy</p>
                             <form onSubmit={this.onSubmit}>
@@ -115,7 +115,7 @@ class Register extends Component {
                                         )
                                     }
                                 </div>
-                                <input type="submit" value={"Sign Up"} className="btn btn-success  mt-4"/>
+                                <input type="submit" value={"Create new account"} className="font-weight-bold btn btn-success pt-2 pb-2 pl-4 pr-4 mt-4"/>
                             </form>
                         </div>
                     </div>
