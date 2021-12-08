@@ -18,6 +18,7 @@ import setJWTToken from "./securityUtils/setJWTToken";
 import {SET_CURRENT_USER} from "./actions/types";
 import {logout} from "./actions/securityActions";
 import SecuredRoute from "./securityUtils/SecureRoute";
+import ViewProjectTask from "./components/ProjectBoard/ProjectTasks/ViewProjectTask";
 
 
 const jwtToken=localStorage.jwtToken
@@ -61,6 +62,7 @@ function App() {
                     <SecuredRoute exact path={"/projectBoard/:id"} component={ProjectBoard}/>
                     <SecuredRoute exact path={"/addProjectTask/:id"} component={AddProjectTask}/>
                     <SecuredRoute exact path={"/updateProjectTask/:backlog_id/:pt_id"} component={UpdateProjectTask}/>
+                    <SecuredRoute exact path={"/getProjectTask/:backlog_id/:pt_id"} component={ViewProjectTask}/>
                     </Switch>
                 </div>
             </Router>

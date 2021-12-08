@@ -39,22 +39,32 @@ class ProjectTask extends Component {
             <p className="card-text text-truncate ">
               {project_task.acceptanceCriteria}
             </p>
+
+            <Link
+                to={`/getProjectTask/${project_task.projectIdentifier}/${project_task.projectSequence}`}
+                className="btn btn-outline-dark"
+            >
+              <i className="fas fa-eye"/> View
+            </Link>
+            &nbsp;&nbsp;
+
             <Link
               to={`/updateProjectTask/${project_task.projectIdentifier}/${project_task.projectSequence}`}
-              className="btn btn-primary"
+              className="btn btn-outline-dark"
             >
-              <b>Update</b>
+              <i className="fas fa-edit"/> Update
             </Link>
 
+            &nbsp;&nbsp;
             <button
-              className="btn btn-danger ml-4"
+              className="btn btn-outline-dark "
               onClick={this.onDeleteClick.bind(
                 this,
                 project_task.projectIdentifier,
                 project_task.projectSequence
               )}
             >
-              <b>Delete</b>
+              <i className="fas fa-trash"/> Delete
             </button>
           </div>
         </div>
