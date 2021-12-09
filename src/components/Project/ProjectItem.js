@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {deleteProject} from "../../actions/projectActions";
+import '../Layout/Landing.css'
 
 class ProjectItem extends Component {
     onDeleteClick = (id) => {
@@ -13,7 +14,7 @@ class ProjectItem extends Component {
         const {project} = this.props;
         return (
             <div className="container">
-                <div className="card card-body bg-dark mb-3 text-white border-secondary border-4">
+                <div className="projectItem_car card-body mb-3 text-white border-secondary border-4">
                     <div className="row">
                         <div className="col-3 ml-5 border text-left">
                             <p style={{marginTop: "20px"}}>Project Id : {project.projectIdentifier}</p>
