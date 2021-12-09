@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ProjectTask from "./ProjectTasks/ProjectTask";
-
+import "./ProjectTasks/style.css";
 class Backlog extends Component {
   render() {
     const { project_tasks_prop } = this.props;
@@ -34,7 +34,7 @@ class Backlog extends Component {
         <div className="row">
           <div className="col-md-4">
             <div className="card text-center mb-2">
-              <div className="pt-2 bg-light text-primary">
+              <div className=" demo pt-2 text-light">
                 <h4>
                   To Do
                 </h4>
@@ -45,7 +45,7 @@ class Backlog extends Component {
 
           <div className="col-md-4">
             <div className="card text-center mb-2">
-              <div className="pt-2 bg-light text-primary">
+              <div className="demo pt-2 text-light">
                 <h4>
                   In Progress
                 </h4>
@@ -55,7 +55,7 @@ class Backlog extends Component {
           </div>
           <div className="col-md-4">
             <div className="card text-center mb-2">
-              <div className="pt-2 bg-light text-primary">
+              <div className="demo pt-2 text-light">
                 <h4>
                   Done
                 </h4>
