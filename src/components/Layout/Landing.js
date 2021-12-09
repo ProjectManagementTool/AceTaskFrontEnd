@@ -4,6 +4,7 @@ import {connect} from "react-redux"
 import PropTypes from "prop-types"
 import logo from "../../assets/AceTask.gif"
 import '../../../src/App.css'
+import './Landing.css'
 
 class Landing extends Component {
 
@@ -24,7 +25,7 @@ class Landing extends Component {
                                 <div>
                                     <img src={logo} width={"60%"} alt="Logo" />
                                 </div>
-                                <p className="lead text-dark">
+                                <p className="demo  bg-white text-primary">
                                     Create your account to join active projects or start your own
                                 </p>
                                 <hr/>
