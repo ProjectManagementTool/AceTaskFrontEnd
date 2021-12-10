@@ -41,7 +41,7 @@ class Backlog extends Component {
 
         {/*Search Bar*/}
         <div className={"search"}>
-          <input className={"m-3 p-1"} type="text" placeholder="Search your project...." onChange={(event => this.setState({searchTerm:event.target.value}))}/>
+          <input className={"m-3 p-1"} type="text" placeholder="Search your task...." onChange={(event => this.setState({searchTerm:event.target.value}))}/>
           <i className={"search_button fa fa-search "}></i>
         </div>
         {project_tasks_prop.filter((value => {
