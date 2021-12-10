@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import ProjectTask from "./ProjectTasks/ProjectTask";
 import "./ProjectTasks/style.css";
+import ProjectItem from "../Project/ProjectItem";
 class Backlog extends Component {
+  constructor() {
+    super();
+    this.state={
+      searchTerm:''
+    }
+  }
   render() {
     const { project_tasks_prop } = this.props;
 
@@ -31,6 +38,27 @@ class Backlog extends Component {
     }
     return (
       <div className="container">
+
+        {/*Search Bar*/}
+        <div className={"search"}>
+          <input className={"m-3 p-1"} type="text" placeholder="Search your project...." onChange={(event => this.setState({searchTerm:event.target.value}))}/>
+          <i className={"search_button fa fa-search "}></i>
+        </div>
+        {project_tasks_prop.filter((value => {
+          if(this.state.searchTerm==""){
+            return ""
+          }else if(value.summary.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || value.projectSequence===this.state.searchTerm ){
+            return value
+          }
+        })).map((project_task,key) => (
+            <div className={"user"} key={key}>
+              <ProjectTask key={project_task.id} project_task={project_task}/>
+            </div>
+        ))}
+
+
+
+
         <div className="row">
           <div className="col-md-4">
             <div className="card text-center mb-2">

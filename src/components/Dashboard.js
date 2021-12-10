@@ -32,6 +32,7 @@ class Dashboard extends Component {
               <div className="col-md-12">
 
                 <h1 className=" text-center">Project Dashboard</h1>
+                <hr/>
 
                 <div className={"search"}>
                 <input className={"m-3 p-1"} type="text" placeholder="Search your project...." onChange={(event => this.setState({searchTerm:event.target.value}))}/>
@@ -40,7 +41,7 @@ class Dashboard extends Component {
                 {projects.filter((value => {
                   if(this.state.searchTerm==""){
                     return value
-                  }else if(value.projectName.toLowerCase().includes(this.state.searchTerm.toLowerCase())){
+                  }else if(value.projectName.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || value.projectIdentifier===this.state.searchTerm){
                     return value
                   }
                 })).map((project,key) => (
