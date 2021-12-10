@@ -4,8 +4,15 @@ import CreateProjectButton from "./Project/CreateProjectButton";
 import { connect } from "react-redux";
 import { getProjects } from "../actions/projectActions";
 import { PropTypes } from "prop-types";
+import './Dashboard.css'
 
 class Dashboard extends Component {
+  constructor() {
+    super();
+    this.state={
+      searchTerm:''
+    }
+  }
   componentDidMount() {
     this.props.getProjects();
   }
@@ -23,12 +30,33 @@ class Dashboard extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12">
+
                 <h1 className=" text-center">Project Dashboard</h1>
 
-                <hr />
-                {projects.map((project) => (
-                  <ProjectItem key={project.id} project={project}/>
+                <div className={"search"}>
+                <input className={"fas fa-search m-3 p-2"} type="text" placeholder="Search your project" onChange={(event => this.setState({searchTerm:event.target.value}))}/>
+                  <i className={"search_button fa fa-search "}></i>
+                </div>
+                {projects.filter((value => {
+                  if(this.state.searchTerm==""){
+                    return value
+                  }else if(value.projectName.toLowerCase().includes(this.state.searchTerm.toLowerCase())){
+                    return value
+                  }
+                })).map((project,key) => (
+                    <div className={"user"} key={key}>
+                      <ProjectItem key={project.id} project={project}/>
+                    </div>
                 ))}
+
+                {/*<h1 className=" text-center">Project Dashboard</h1>*/}
+
+                {/*<hr />*/}
+                {/*{projects.map((project) => (*/}
+                {/*  <ProjectItem key={project.id} project={project}/>*/}
+                {/*))}*/}
+
+
               </div>
             </div>
           </div>
