@@ -15,8 +15,8 @@ class ProjectItem extends Component {
         return (
             <div className="container">
                 <div className="projectItem_car card-body mb-3 text-white border-secondary border-4">
-                    <div className="row">
-                        <div className="col-3 ml-5 border text-left">
+                    <div className="row border-left">
+                        <div className="col-3 ml-auto border text-left">
                             <p style={{marginTop: "20px"}}>Project Id : {project.projectIdentifier}</p>
                             <p>Start Date : {project.start_date}</p>
                             <p>Expected End Date : {project.end_date}</p>
