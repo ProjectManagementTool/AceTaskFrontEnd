@@ -34,7 +34,7 @@ class Dashboard extends Component {
                 <h1 className=" text-center">Project Dashboard</h1>
 
                 <div className={"search"}>
-                <input className={"fas fa-search m-3 p-2"} type="text" placeholder="Search your project" onChange={(event => this.setState({searchTerm:event.target.value}))}/>
+                <input className={"m-3 p-1"} type="text" placeholder="Search your project...." onChange={(event => this.setState({searchTerm:event.target.value}))}/>
                   <i className={"search_button fa fa-search "}></i>
                 </div>
                 {projects.filter((value => {
