@@ -23,23 +23,18 @@ class Landing extends Component {
                             <div className="col-md-12 text-center">
                                 {/*<h1 className="display-3 mb-4">Personal Kanban Tool</h1>*/}
                                 <div>
-                                    <img src={logo} width={"60%"} alt="Logo"/>
+                                    <img src={logo} width={"60%"} alt="Logo" />
                                 </div>
-
-                                <p className="btmtext lead ">
+                                <p className="lead text-dark">
                                     Create your account to join active projects or start your own
                                 </p>
-
                                 <hr/>
-                                <div className={"landing_bottom"}>
-                                    <Link className={"btn btn-lg btn-outline-success border  border-success ml-5"}
-                                          to={"/register"}>
-                                        <i className='fas fa-user-plus'> Create new account</i>
-                                    </Link>
-                                    <Link className={"btn btn-lg btn-outline-dark ml-5"} to={"/login"}>
-                                        Log In <i className='	fas fa-sign-in' aria-hidden="true"> </i>
-                                    </Link>
-                                </div>
+                                <Link className={"btn btn-lg btn-outline-success border  border-success ml-5"} to={"/register"}>
+                                    <i className='fas fa-user-plus'>  Create new account</i>
+                                </Link>
+                                <Link className={"btn btn-lg btn-outline-dark ml-5"} to={"/login"}>
+                                    Log In <i className='	fas fa-sign-in' aria-hidden="true"> </i>
+                                </Link>
 
 
                             </div>
