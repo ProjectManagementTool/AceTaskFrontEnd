@@ -38,31 +38,10 @@ class Backlog extends Component {
     }
     return (
       <div className="container">
-
-        {/*Search Bar*/}
-        <div className={"search"}>
-          <input className={"m-3 p-1"} type="text" placeholder="Search your task...." onChange={(event => this.setState({searchTerm:event.target.value}))}/>
-          <i className={"search_button fa fa-search "}></i>
-        </div>
-        {project_tasks_prop.filter((value => {
-          if(this.state.searchTerm==""){
-            return ""
-          }else if(value.summary.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || value.projectSequence===this.state.searchTerm ){
-            return value
-          }
-        })).map((project_task,key) => (
-            <div className={"user"} key={key}>
-              <ProjectTask key={project_task.id} project_task={project_task}/>
-            </div>
-        ))}
-
-
-
-
         <div className="row">
           <div className="col-md-4">
             <div className="card text-center mb-2">
-              <div className=" demo pt-2 text-light">
+              <div className="pt-2 bg-light text-primary">
                 <h4>
                   To Do
                 </h4>
