@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ProjectTask from "./ProjectTasks/ProjectTask";
-import './Backlog.css'
 
 class Backlog extends Component {
   render() {
