@@ -5,9 +5,6 @@ import PropTypes from "prop-types"
 import logo from "../../assets/Ace.gif"
 import '../../../src/App.css';
 import './Landing.css';
-import logo from "../../assets/AceTask.gif"
-import '../../../src/App.css'
-import './Landing.css'
 
 class Landing extends Component {
 
