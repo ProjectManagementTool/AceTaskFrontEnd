@@ -89,6 +89,7 @@ class AddProjectTask extends Component {
                     name="acceptanceCriteria"
                     value={this.state.acceptanceCriteria}
                     onChange={this.onChange}
+                    required
                   />
                 </div>
                 <h6>Due Date</h6>
@@ -99,6 +100,7 @@ class AddProjectTask extends Component {
                     name="dueDate"
                     value={this.state.dueDate}
                     onChange={this.onChange}
+                    required
                   />
                 </div>
                 <div className="form-group">
@@ -107,6 +109,7 @@ class AddProjectTask extends Component {
                     name="priority"
                     value={this.state.priority}
                     onChange={this.onChange}
+                    required
                   >
                     <option value={0}>Select Priority</option>
                     <option value={1}>High</option>

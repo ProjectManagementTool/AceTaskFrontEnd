@@ -63,6 +63,7 @@ class AddProject extends Component {
                       name={"projectName"}
                       value={this.state.projectName}
                       onChange={this.onChange}
+
                     />
                     {errors.projectName && (
                       <div className={"invalid-feedback"}>
@@ -112,6 +113,7 @@ class AddProject extends Component {
                       name="start_date"
                       value={this.state.start_date}
                       onChange={this.onChange}
+                      required
                     />
                   </div>
                   <h6>Estimated End Date</h6>
@@ -122,6 +124,7 @@ class AddProject extends Component {
                       name="end_date"
                       value={this.state.end_date}
                       onChange={this.onChange}
+                      required
                     />
                   </div>
 
