@@ -16,16 +16,25 @@ class ProjectItem extends Component {
             <div className="container">
                 <div className="projectItem_car card-body mb-3 text-white border-secondary border-4">
                     <div className="row border-left">
-                        <div className="col-3 ml-auto border text-left">
+                        <div className="col-3 ml-auto pr-3 border text-left">
                             <p style={{marginTop: "20px"}}>Project Id : {project.projectIdentifier}</p>
                             <p>Start Date : {project.start_date}</p>
-                            <p>Expected End Date : {project.end_date}</p>
+                            <p style={{fontSize:"15px"}}>Expected End Date : {project.end_date}</p>
                         </div>
                         <div className="col-lg-5 col-md-4 col-8 border">
-                            <h3 style={{marginTop: "30px"}}>{project.projectName}</h3>
+                            <h3 style={{marginTop: "20px"}}>{project.projectName}</h3>
                             <p>{project.description}</p>
 
+                            <div className="text-center mb-0">
+                                <Link to={`/chart/${project.projectIdentifier}`} className="btn btn-outline-light font-weight-bold ml-2">
+                                    <i className={"fas fa-analytics "}/> Project Analytics
+                                </Link>
+                            </div>
+
                         </div>
+
+
+
                         <div className="col-md-3 ml-auto border-right">
                             <ul className="list-group">
                                 <Link to={`/projectBoard/${project.projectIdentifier}`}>
