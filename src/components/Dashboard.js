@@ -60,9 +60,9 @@ class Dashboard extends Component {
                   <i className={"search_button fa fa-search "}></i>
                 </div>
                 {projects.filter((value => {
-                  if(this.state.searchTerm==""){
+                  if(this.state.searchTerm===""){
                     return value
-                  }else if(value.projectName.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || value.projectIdentifier===this.state.searchTerm){
+                  }else if(value.projectName.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || value.projectIdentifier.toLowerCase().includes(this.state.searchTerm)){
                     return binarySearch(projects , value)
                   }
                 })).map((project,key) => (

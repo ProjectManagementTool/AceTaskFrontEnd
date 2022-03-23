@@ -68,9 +68,9 @@ class Backlog extends Component {
           <i className={"search_button fa fa-search "}></i>
         </div>
         {project_tasks_prop.filter((value => {
-          if(this.state.searchTerm==""){
+          if(this.state.searchTerm===""){
             return ""
-          }else if(value.summary.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || value.projectSequence===this.state.searchTerm ){
+          }else if(value.summary.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || value.projectSequence.toLowerCase().includes(this.state.searchTerm )){
             return binarySearchAlgorithm(tasks,value)
           }
         })).map((project_task,key) => (
