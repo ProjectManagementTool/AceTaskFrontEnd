@@ -86,10 +86,10 @@ class ChartAnalysis extends Component {
         const diff=Math.abs(new Date(dem.replace(/-/,'/'))-new Date())
         // console.log(diff)
 
-       const days=Math.floor(diff/(24*60*60*1000)+1)
+       const days=Math.floor(diff/(24*60*60*1000))
 
         const spent=Math.abs(new Date()-new Date(startdate.replace(/-/,'/')))
-        const spentDays=Math.floor(spent/(24*60*60*1000)+1)
+        const spentDays=Math.floor(spent/(24*60*60*1000))
 
 
         const data = {

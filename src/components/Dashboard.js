@@ -19,6 +19,27 @@ class Dashboard extends Component {
 
   render() {
     const projects = this.props.project.projects;
+    function binarySearch(sortedArray, key){
+      let start = 1;
+      let end = sortedArray.length - 1;
+
+      while (start <= end) {
+        let middle = Math.floor((start + end) / 2);
+
+        if (sortedArray[middle] === key) {
+          // found the key
+          return middle;
+        } else if (sortedArray[middle] < key) {
+          // continue searching to the right
+          start = middle + 1;
+        } else {
+          // search to the left
+          end = middle - 1;
+        }
+      }
+      // key wasn't found
+      return -1;
+    }
     return (
       <div>
         {/*Dashboard Component (Project Item included) */}
@@ -42,7 +63,7 @@ class Dashboard extends Component {
                   if(this.state.searchTerm==""){
                     return value
                   }else if(value.projectName.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || value.projectIdentifier===this.state.searchTerm){
-                    return value
+                    return binarySearch(projects , value)
                   }
                 })).map((project,key) => (
                     <div className={"user"} key={key}>
