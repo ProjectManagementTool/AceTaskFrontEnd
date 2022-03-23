@@ -16,6 +16,29 @@ class Backlog extends Component {
       <ProjectTask key={project_task.id} project_task={project_task} />
     ));
 
+    function binarySearchAlgorithm(sortedArray, key){
+      let begin = 1;
+      let end = sortedArray.length - 1;
+
+      while (begin <= end) {
+        let middle = Math.floor((begin + end) / 2);
+
+        if (sortedArray[middle] === key) {
+          // found the key
+          return middle;
+        } else if (sortedArray[middle] < key) {
+          // continue searching to the right
+          begin = middle + 1;
+        } else {
+          // search to the left
+          end = middle - 1;
+        }
+      }
+      // key wasn't found
+      return -1;
+    }
+
+
     let todoItems = [];
     let inProgressItems = [];
     let doneItems = [];
@@ -48,7 +71,7 @@ class Backlog extends Component {
           if(this.state.searchTerm==""){
             return ""
           }else if(value.summary.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || value.projectSequence===this.state.searchTerm ){
-            return value
+            return binarySearchAlgorithm(tasks,value)
           }
         })).map((project_task,key) => (
             <div className={"user"} key={key}>
