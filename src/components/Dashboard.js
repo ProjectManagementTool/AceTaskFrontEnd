@@ -63,12 +63,15 @@ class Dashboard extends Component {
                   if(this.state.searchTerm===""){
                     return value
                   }else if(value.projectName.toLowerCase().includes(this.state.searchTerm.toLowerCase()) || value.projectIdentifier.toLowerCase().includes(this.state.searchTerm)){
+
                     return binarySearch(projects , value)
                   }
                 })).map((project,key) => (
+
                     <div className={"user"} key={key}>
                       <ProjectItem key={project.id} project={project}/>
                     </div>
+
                 ))}
 
                 {/*<h1 className=" text-center">Project Dashboard</h1>*/}

@@ -27,7 +27,7 @@ class ProjectItem extends Component {
 
                             <div className="text-center mb-0">
                                 <Link to={`/chart/${project.projectIdentifier}`} className="btn btn-outline-light font-weight-bold ml-2">
-                                    <i className={"fas fa-analytics "}/> Project Report
+                                    <i className={"fas fa-analytics "}/> Project Deadline Report
                                 </Link>
                             </div>
 
