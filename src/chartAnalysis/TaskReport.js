@@ -63,18 +63,18 @@ class ProjectBoard extends Component {
                 'Done'
             ],
             datasets: [{
-                label:"Project Task Report",
+                label:"ToDo",
                 data: [todo, inprogress, done],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(255,0,0,0.3)',
+                    'rgba(0,0,255,0.3)',
+                    'rgba(0,255,0,0.3)',
 
                 ],
                 borderColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(255, 159, 64)',
-                    'rgb(255, 205, 86)',
+                    'rgba(255,0,0,0.3)',
+                    'rgba(0,0,255,0.3)',
+                    'rgba(0,255,0,0.3)',
 
                 ],
                 borderWidth: 1
@@ -84,10 +84,13 @@ class ProjectBoard extends Component {
 
         return (
             <div>
+                <div style={{textAlign:"center"}}>
+                To Do:{todoItems.length}<br/>
+                In Progress:{inProgressItems.length}<br/>
+                Done:{doneItems.length}
+                </div>
                 <div className="container">
-                    {/*<p>Total number of project:{todoItems.length}</p>*/}
-                    {/*<p>Total number of project:{inProgressItems.length}</p>*/}
-                    {/*<p>Total number of project:{doneItems.length}</p>*/}
+
                     <Bar data={data}/>
                 </div>
             </div>
