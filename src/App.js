@@ -20,6 +20,7 @@ import {logout} from "./actions/securityActions";
 import SecuredRoute from "./securityUtils/SecureRoute";
 import ViewProjectTask from "./components/ProjectBoard/ProjectTasks/ViewProjectTask";
 import ChartAnalysis from "./chartAnalysis/ChartAnalysis";
+import TaskReport from "./chartAnalysis/TaskReport";
 
 
 const jwtToken=localStorage.jwtToken
@@ -61,6 +62,7 @@ function App() {
                     <SecuredRoute exact path={"/addProject"} component={AddProject}/>
                     <SecuredRoute exact path={"/updateProject/:id"} component={UpdateProject}/>
                     <SecuredRoute exact path={"/chart/:id"} component={ChartAnalysis}/>
+                    <SecuredRoute exact path={"/taskchart"} component={TaskReport}/>
                     <SecuredRoute exact path={"/projectBoard/:id"} component={ProjectBoard}/>
                     <SecuredRoute exact path={"/addProjectTask/:id"} component={AddProjectTask}/>
                     <SecuredRoute exact path={"/updateProjectTask/:backlog_id/:pt_id"} component={UpdateProjectTask}/>
