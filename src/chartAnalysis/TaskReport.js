@@ -63,7 +63,7 @@ class ProjectBoard extends Component {
                 'Done'
             ],
             datasets: [{
-                label:"ToDo",
+                label:"Number of Tasks",
                 data: [todo, inprogress, done],
                 backgroundColor: [
                     'rgba(255,0,0,0.3)',
