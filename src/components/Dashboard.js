@@ -19,6 +19,7 @@ class Dashboard extends Component {
 
   render() {
     const projects = this.props.project.projects;
+    //binary search algorithm
     function binarySearch(sortedArray, key){
       let start = 1;
       let end = sortedArray.length - 1;
